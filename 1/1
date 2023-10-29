@@ -1,1 +1,15 @@
+ 1. 
+print('Число')
+a = float(input())
+print('Округлить до скольки знаков после точки?')
+b = int(input())
+c = round(a, b)
+print (c)
 
+
+ 2.
+a = float(input())
+b = float(input())
+s = (a + b)/2
+s = round(s)
+print('Среднее арифметическое -', s)
