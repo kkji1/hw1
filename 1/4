@@ -19,24 +19,12 @@ s = input()
 sf = s[0::2]
 print (sf)
 
-4.3 #не смогла решить
-orig = str(input())
-fin_list = []
-last_sp = orig.rfind(" ")
-pen = orig[:last_sp:-1]
-pen = pen.replace(' ', '')
-orig = orig[:last_sp]
-pen = int(pen)
-
-for i in range(3):
-    sp = orig.find(" ")
-    bin = orig[:sp:1]
-    bin = bin.replace(' ', '')
-    bin = int(bin)
-    fin_list.append(bin ** pen)
-    orig = orig[bin + 2:]
-
-print (fin_list)
+4.3
+a = input(). split()
+fin = []
+for i in range (len(a) - 1):
+    f = fin.append (int(a[i]) ** int(a[-1]))
+print (fin)
 
 4.4
 orig = str(input())
