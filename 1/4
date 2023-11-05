@@ -1,0 +1,63 @@
+4.1
+orig_str = str(input())
+fin_list = []
+
+num_space = orig_str.count(" ")  #пробелы + 1 = кол-во слов в строчке
+for i in range (3):
+    last_space = orig_str.rfind(" ")
+    if last_space != -1:
+        bin = orig_str[:last_space:-1]
+        bin = bin[::-1] #вынесла в bin последнее слово
+        fin_list.append([bin]) #наполняю итоговый список
+        orig_str = orig_str[:last_space] #удаляю добавленное слово из исходной строки
+    else:
+        fin_list += [orig_str]
+print (fin_list)
+
+4.2
+s = input()
+sf = s[0::2]
+print (sf)
+
+4.3 #не смогла решить
+orig = str(input())
+fin_list = []
+last_sp = orig.rfind(" ")
+pen = orig[:last_sp:-1]
+pen = pen.replace(' ', '')
+orig = orig[:last_sp]
+pen = int(pen)
+
+for i in range(3):
+    sp = orig.find(" ")
+    bin = orig[:sp:1]
+    bin = bin.replace(' ', '')
+    bin = int(bin)
+    fin_list.append(bin ** pen)
+    orig = orig[bin + 2:]
+
+print (fin_list)
+
+4.4
+orig = str(input())
+znak = str(orig[-1])
+print (orig + znak)
+
+4.5
+orig = str(input())
+nx = str(orig.count("x") + orig.count("X"))
+ny = str(orig.count("y") + orig.count("Y"))
+print("x:", (nx + ",") , "y:" , (ny + "."))
+
+4.6
+orig = str(input())
+s1 = orig.find("(")
+s2 = orig.find(")")
+f1 = orig.rfind("(")
+f2 = orig.rfind(")")
+
+stext = orig[s1 + 1:s2:1]
+ftext = orig[f1 + 1:f2:1]
+print (stext, ftext, sep = " ")
+
+
