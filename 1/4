@@ -1,7 +1,6 @@
 4.1
 orig_str = str(input())
 fin_list = []
-
 num_space = orig_str.count(" ")  #пробелы + 1 = кол-во слов в строчке
 for i in range (3):
     last_space = orig_str.rfind(" ")
