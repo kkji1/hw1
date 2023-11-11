@@ -1,0 +1,55 @@
+5.1
+n = int(input())
+cnt = 0
+A = []
+for i in range (n):
+    city = input()
+    if city in A:
+        cnt = cnt
+    else:
+        cnt += 1
+        A.append (city)
+print (cnt)
+
+5.2
+a = input()
+a = a.capitalize().split()
+t = len(a)
+
+for i in range(t - 1):
+    if ("." in a[i]) or ("!" in a[i]) or ("?" in a[i]):
+        a[i + 1] = a[i + 1].capitalize()
+    else:
+        continue
+
+print(" ".join(a))
+
+5.3
+a = input().replace(" ", "").lower()
+b = input().replace(" ", "").lower()
+
+set1 = set(a)
+set2 = set(b)
+
+if set1 == set2:
+    print("Строки являются анаграммами.")
+else:
+    print("Строки не являются анаграммами.")
+
+5.4
+alg = input().split()
+geom = input().split()
+trig = input().split()
+res = []
+
+for i in range(len(trig)):
+    if (trig[i] in alg) and (trig[i] in geom):
+        res.append(trig[i])
+    else:
+        res = res
+
+if res == []:
+    print ("Все три задачи никто не решил")
+
+res.sort(key = str.lower)
+print (" ".join(res))
