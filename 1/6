@@ -1,0 +1,34 @@
+6.1
+def find_polindrom():
+    pol = input()
+    rev_pol = pol[::-1]
+
+    if pol.lower() == rev_pol.lower():
+       print("true")
+    else:
+       print("false")
+
+6.2
+def register(fname, lname, fathername, age):
+    year_birth = -1 * (age - 2023)
+    print(lname, fname, fathername, year_birth, "г.р. зарегистрирован")
+
+register ("Вера", "Полосёлова", "Геннадьевна", 16)
+
+ИЛИ:
+def register():
+    fname, lname, fathername, age = input(), input(), input(), int(input())
+    year_birth = -1 * (age - 2023)
+
+    print(lname, fname, fathername, year_birth, "г.р. зарегистрирован")
+
+register()
+
+6.3
+def MaxNum(a, b, c = 0):
+    if a > b and a > c:
+        print(a)
+    elif b > a and b > c:
+        print(b)
+    else:
+        print(c)
