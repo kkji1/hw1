@@ -1,0 +1,26 @@
+7.1
+a = [3, "12", 8, 6, "30"]
+b = [5, "6", "8", "0", "40"]
+a, b = list(map(int, a)), list(map(int, b))
+res = list(map(lambda x, y: x + y, a, b))
+
+print(res)
+
+7.2
+s  =  [3, 6, 19, 13, 26, 39, 57, 0]
+s = list(filter(lambda x: (x % 19 == 0 and x != 0) or (x % 13 == 0 and x != 0), s))
+
+print(s)
+
+7.3
+a = [3, 8, 12, 28, 26, 2, 3]
+def maxim(x, y):
+    if x > y:
+        return x
+    else:
+        return y
+
+from functools import reduce
+a = reduce(maxim, a)
+
+print(a)
