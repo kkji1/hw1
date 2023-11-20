@@ -1,0 +1,58 @@
+9.1
+def delit(x):
+    res = []
+    for i in range(2,x + 1):
+        if x % i == 0:
+            res.append(i)
+        else:
+            res = res
+    return res
+
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
+
+aa = delit(a)
+bb = delit(b)
+res = []
+for i in range(0, len(aa)):
+    if aa[i] in bb:
+        res.append(aa[i])
+    res = res
+    
+if res == []:
+    print('У', a, 'и', b, 'нет общих кратных')
+else:
+    print('Наименьшее общее кратное', a, 'и', b, ':', min(res))
+
+
+9.2
+def prime_or_not(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+n = int(input("Введите число: "))
+res = []
+for i in range(2, n + 1):
+    if prime_or_not(i) == True:
+        res.append(i)
+    else:
+        res = res
+print("Простые числа от 1 до", n, ":", res)
+
+
+9.3
+def delit(x):
+    res = []
+    for i in range(1,x + 1):
+        if x % i == 0:
+            res.append(i)
+        else:
+            res = res
+    return res
+    
+n = int(input("Введите число: "))
+print('Делители числа', n, ':', delit(n))
